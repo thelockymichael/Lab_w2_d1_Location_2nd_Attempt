@@ -73,9 +73,12 @@ class MainActivity : AppCompatActivity() {
 
     private fun startLocationUpdates() {
         if (fusedLocationProviderClient != null) {
-            if (ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_FINE_LOCATION) != PackageManager.PERMISSION_GRANTED && ActivityCompat.checkSelfPermission(this, Manifest.permission.ACCESS_COARSE_LOCATION) != PackageManager.PERMISSION_GRANTED) {
-                // TODO: Consider calling
-                //    ActivityCompat#requestPermissions
+            if (ActivityCompat.checkSelfPermission(this,
+                            Manifest.permission.ACCESS_FINE_LOCATION) !=
+                    PackageManager.PERMISSION_GRANTED &&
+                    ActivityCompat.checkSelfPermission(
+                            this, Manifest.permission.ACCESS_COARSE_LOCATION
+                    ) != PackageManager.PERMISSION_GRANTED) {
                 // here to request the missing permissions, and then overriding
                 //   public void onRequestPermissionsResult(int requestCode, String[] permissions,
                 //                                          int[] grantResults)
@@ -88,8 +91,6 @@ class MainActivity : AppCompatActivity() {
             fusedLocationProviderClient.requestLocationUpdates(request, locationCallback,
                     Looper.getMainLooper())
         }
-
-
     }
 
     private fun requestLocationPermission() {
