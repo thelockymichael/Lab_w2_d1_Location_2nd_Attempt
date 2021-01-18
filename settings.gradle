@@ -1,0 +1,2 @@
+include ':app'
+rootProject.name = "Lab_w2_d1_Location_2nd_Attempt"
