@@ -64,8 +64,8 @@ class MainActivity : AppCompatActivity() {
                 }
 
                 for (location in locationResult!!.locations) {
-                    latitudeField.text = "${location.latitude}"
-                    longitudeField.text = "${location.longitude}"
+                    latitudeField.text = "${location.latitude} LAT"
+                    longitudeField.text = "${location.longitude} LONG"
                 }
             }
         }
